@@ -18,7 +18,7 @@ To make your local copy of the repository follow the steps:
 - Type this command:
 
 ```bash
-$ git clone https://github.com/<your-github-username>/Hacktoberfest-FirstPR
+$ git clone https://github.com/<your-github-username>/Hacktoberfest
 ```
 
 #### Step 3: Creating a new branch (IMP)
