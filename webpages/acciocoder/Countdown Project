@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <div class="outer"></div>
+    <div class="iner">
+        <div class="container">
+            <h1 class="title"><span>2023</span>  NEW YEAR COUNTDOWN </h1>
+            <div class="Countdown">
+                <!-- for days  -->
+                <div>
+                    <p id="days" class="big-text">0</p>
+                    <span>Days</span>
+                </div>
+                <!-- for hours  -->
+                <div>
+                    <p id="hours" class="big-text">0</p>
+                    <span>Hours</span>
+                </div>
+                <!-- for minutes  -->
+                <div>
+                    <p id="min" class="big-text">0</p>
+                    <span>Minutes</span>
+                </div>
+                <!-- for seconds -->
+                <div>
+                    <p id="sec" class="big-text">0</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
+let DaysItem=document.querySelector("#days");
+let hoursItem=document.querySelector("#hours");
+let minItem=document.querySelector("#min");
+let secItem=document.querySelector("#sec");
+
+let countdown=()=>{
+    let futureDate=new Date("1 jan 2023");
+    let currDate=new Date();
+    let myDate=futureDate-currDate;
+    // console.log(myDate);
+    let days=Math.floor(myDate/1000/60/60/24);
+
+    let hours=Math.floor(myDate/1000/60/60)%24;
+
+    let min=Math.floor(myDate/1000/60)%60;
+
+    let sec=Math.floor(myDate/1000)%60;
+    DaysItem.innerHTML=days;
+    hoursItem.innerHTML=hours;
+    minItem.innerHTML=min;
+    secItem.innerHTML=sec;
+
+}
+countdown()
+
+setInterval(countdown,1000)
+# countdown-project
+This is a countdown project which count number of days remaining in 2023
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("timebackground.jpg") ;  
+    
+    /* attached 1 more image -->time1.jpg  to change background whenever want */
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    position: relative;
+
+}
+.outer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(1,0,0,0.4);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.Countdown{
+display: flex;
+}
+.big-text{
+    font-size: 4rem;
+}
+.title{
+    margin: 15px;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    list-style: 5.5rem;
+}
+.title span{
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 2rem;
+}
+.iner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+.Countdown > div{
+    margin: 0 2rem;
+    text-align: center;
+    border: 3px solid white;
+    padding: 2px 20px;
+    border-radius: 14px;
+   box-shadow: 0px 2px 10px rgba(0,0,0,0.6);
+   box-sizing: border-box;
+   color: #fff;
+   min-width: 150px;
+}
+@media(max-width:992px){
+    .Countdown > div{
+        margin: 0 1rem;
+    }
+}
+@media(max-width:767px){
+    .Countdown{
+        flex-wrap: wrap;
+    }
+        .Countdown > div{
+            margin:1rem auto;
+            max-width: 150px;
+        }
+        .title{
+            font-size: 1.5rem;
+            line-height: 3.5rem;
+            margin: 10px 0px;
+        }
+    .title span{
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    }
+}
