@@ -1,0 +1,16 @@
+#bar {
+    width: 300px;
+    border-bottom: 2px solid rgb(88, 88, 88);
+    margin-bottom: 30px;
+    margin-left: 1.5%;
+}
+
+hr {
+    height: 2px;
+}
+
+img {
+    width: 30%;
+    margin: 1.6666%;
+    height: 30%;
+}
