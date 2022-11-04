@@ -6,7 +6,7 @@
 <h1 align="center"> Hacktoberfest 2022 🎉</h1>
 <div align="center">
 <img src="https://img.shields.io/badge/hacktoberfest-2022-blueviolet" alt="Hacktober Badge"/>
-<a href="https://github.com/vanshhhhh" ><img src="https://img.shields.io/badge/Contributions-welcome-violet.svg?style=flat&logo=git" alt="Contributions" /></a>
+<a href="https://github.com/vanshhhhh" ><img src="https://img.shields.io/badge/Contributions-closed-orange.svg?style=flat&logo=git" alt="Contributions" /></a>
 <a href="https://github.com/vanshhhhh/hacktoberfest/pulls"><img src="https://img.shields.io/github/issues-pr/vanshhhhh/hacktoberfest" alt="Pull Requests Badge"/></a>
 </div>
 🗣 Hacktoberfest encourages participation in the open source community, which grows bigger every year. Complete the 2022 challenge and earn a limited edition T-shirt.
